@@ -1,15 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import App from "./App";
 import "./index.css";
-import App from "./App.tsx";
 
-const rootElement = document.getElementById("root");
+const root = document.getElementById("root");
+if (!root) throw new Error("Élément #root introuvable");
 
-if (rootElement == null) {
-  throw new Error(`Your HTML Document must contain a <div id="root"></div>`);
-}
-
-createRoot(rootElement).render(
+createRoot(root).render(
   <StrictMode>
     <App />
   </StrictMode>,
