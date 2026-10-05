@@ -3,28 +3,57 @@ import type { Content, Lang } from "./type";
 const profileBase = {
   name: "Solène Mendes",
   email: "mendessolene@gmail.com",
-  cvUrl: "/cv.pdf",
   linkedin: "https://www.linkedin.com/in/solene-mendes",
   github: "https://github.com/SoleneMend",
 };
 
 const wedoo = {
-  // Image : place le fichier dans public/projects/ (sinon un visuel par défaut s'affiche)
-  image: "/projects/wedoo.png",
-  architecture: ["React", "API Express", "MySQL", "Docker"],
-  tags: ["React", "Express", "MySQL", "Docker", "GitHub Actions", "Biome"],
+  image: `${import.meta.env.BASE_URL}projects/wedoo.png`,
+  architecture: [
+    "HTML/CSS",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Express",
+    "API Express",
+    "MySQL",
+  ],
+  tags: [
+    "HTML/CSS",
+    "TypeScript",
+    "React",
+    "Express",
+    "MySQL",
+    "GitHub",
+    "Biome",
+  ],
   code: "https://github.com/SoleneMend/Wedoo",
 };
 
-const quaiAntique = {
-  image: "/projects/quai-antique.png",
-  architecture: ["HTML/CSS", "PHP", "MySQL"],
-  tags: ["PHP", "MySQL", "HTML/CSS", "Admin"],
-  code: "https://github.com/SoleneMend/ECF-Studi-QuaiAntique",
+const teamUp = {
+  image: `${import.meta.env.BASE_URL}projects/teamUp.png`,
+  architecture: [
+    "HTML/CSS",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Express",
+    "MySQL",
+  ],
+  tags: [
+    "HTML/CSS",
+    "TypeScript",
+    "React",
+    "Express",
+    "MySQL",
+    "GitHub",
+    "Biome",
+  ],
+  code: "https://github.com/SoleneMend/TeamUp-Front",
 };
 
 const stackItems = {
-  front: "HTML5, CSS3, JavaScript, React",
+  front: "HTML5, CSS3, JavaScript, TypeScript, React",
   back: "Node.js, Express",
   data: "MySQL",
   game: "Unity, C, C#",
@@ -58,6 +87,7 @@ export const content: Record<Lang, Content> = {
     },
     profile: {
       ...profileBase,
+      cvUrl: `${import.meta.env.BASE_URL}cv_fr.pdf`,
       title: "Développeuse web full stack junior",
       headline:
         "Je construis des applications web, de la base de données jusqu'à l'écran.",
@@ -71,15 +101,15 @@ export const content: Record<Lang, Content> = {
         name: "Wedoo",
         ...wedoo,
         problem:
-          "Application web collaborative avec authentification des utilisateurs et opérations CRUD, développée pendant ma formation à la Wild Code School.",
-        role: "Projet d’équipe de 6 personnes. Ma part : [précise ta contribution : fonctionnalités, API, interface…]",
+          "Application web collaborative développée pendant ma formation à la Wild Code School. Elle permet aux utilisateurs de s’authentifier et de gérer différentes données à travers des fonctionnalités CRUD.",
+        role: "Projet réalisé en équipe de 6 personnes selon une méthode Agile. J’ai principalement travaillé sur le développement front-end et back-end de la page dédiée à la gestion du budget.",
       },
       {
-        name: "Quai Antique",
-        ...quaiAntique,
+        name: "Team Up",
+        ...teamUp,
         problem:
-          "Site web pour un restaurant savoyard à Chambéry : galerie photo, comptes utilisateurs et espace d’administration avec gestion des rôles.",
-        role: "Projet d’évaluation de ma formation Studi, rendu en juillet 2023.",
+          "Application web développée pendant ma formation à la Wild Code School, permettant aux utilisateurs de faire des rencontres et de créer des connexions autour de la pratique sportive.",
+        role: "Projet réalisé en équipe de 6 personnes selon une méthode Agile. J’ai contribué au développement front-end et back-end de l’application.",
       },
     ],
     now: {
@@ -143,6 +173,7 @@ export const content: Record<Lang, Content> = {
     },
     profile: {
       ...profileBase,
+      cvUrl: `${import.meta.env.BASE_URL}cv_en.pdf`,
       title: "Junior full stack web developer",
       headline: "I build web applications, from the database to the screen.",
       intro:
@@ -155,15 +186,15 @@ export const content: Record<Lang, Content> = {
         name: "Wedoo",
         ...wedoo,
         problem:
-          "Collaborative web application with user authentication and CRUD operations, built during my training at Wild Code School.",
-        role: "Team project with 6 people. My part: [describe your contribution: features, API, interface…]",
+          "A collaborative web application developed during my training at Wild Code School. It allows users to authenticate and manage different types of data through CRUD operations.",
+        role: "A 6-person team project following an Agile methodology. I mainly worked on the front-end and back-end development of the budget management page.",
       },
       {
-        name: "Quai Antique",
-        ...quaiAntique,
+        name: "Team Up",
+        ...teamUp,
         problem:
-          "Website for a Savoyard restaurant in Chambéry: photo gallery, user accounts and an admin area with role management.",
-        role: "Assessment project from my Studi training, delivered in July 2023.",
+          "A web application developed during my training at Wild Code School, designed to help users meet new people and build connections through sports.",
+        role: "A 6-person team project following an Agile methodology. I contributed to both the front-end and back-end development of the application.",
       },
     ],
     now: {
